@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "getKST"
+version = "1.0.0"
+description = "A Python package that returns datetime values ​​for the Asia/Seoul region."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "HaeengIn", email = "haeengin@gmail.com" }]
+license = "MIT"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent"
+]
+
+[project.urls]
+Homepage = "https://github.com/HaeengIn/getKST"
+
+[tool.setuptools.packages.find]
+where = ["src"]
