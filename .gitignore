@@ -192,4 +192,8 @@ pyrightconfig.json
 .history
 .ionide
 
+### Bash ###
+# Ignore bash settings
+.bashrc
+
 # End of https://www.toptal.com/developers/gitignore/api/python,visualstudiocode
