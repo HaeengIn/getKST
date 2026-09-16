@@ -10,6 +10,7 @@ readme = "README.md"
 requires-python = ">=3.9"
 authors = [{ name = "HaeengIn", email = "haeengin@gmail.com" }]
 license = "MIT"
+license-files = ["LICENSE"]
 classifiers = [
   "Programming Language :: Python :: 3",
   "Operating System :: OS Independent"
