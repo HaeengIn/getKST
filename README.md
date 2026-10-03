@@ -57,6 +57,16 @@ Note: Default format of **getKST** is `%Y-%m-%d %H:%M:%S` as a string.
     utc_now = datetime.now(tz=timezone.utc)
     print(getKST(dt=utc_now))
     ```
+	
+- Convert string type to datetime type
+
+	```python
+	from getKST import getKST
+	
+	KST = getKST().toDatetime()
+	
+	print(KST) # Will be printed as a datetime type
+	```
 
 All Python datetime formats are supported.
 
