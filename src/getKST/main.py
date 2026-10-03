@@ -7,7 +7,19 @@ KST = ZoneInfo("Asia/Seoul")
 DEFAULT_FORMAT = "%Y-%m-%d %H:%M:%S"
 
 
-def getKST(format: str = DEFAULT_FORMAT, dt: datetime | None = None) -> str:
+class KSTString(str):
+    _dt: datetime
+
+    def __new__(cls, value: str, dt: datetime) -> KSTString:
+        instance = super().__new__(cls, value)
+        instance._dt = dt
+        return instance
+
+    def toDatetime(self) -> datetime:
+        return self._dt
+
+
+def getKST(format: str = DEFAULT_FORMAT, dt: datetime | None = None) -> KSTString:
     if dt is None:
         target = datetime.now(tz=KST)
     elif dt.tzinfo is None:
@@ -15,4 +27,4 @@ def getKST(format: str = DEFAULT_FORMAT, dt: datetime | None = None) -> str:
     else:
         target = dt.astimezone(KST)
 
-    return target.strftime(format)
+    return KSTString(target.strftime(format), target)
