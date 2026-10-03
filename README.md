@@ -72,6 +72,10 @@ All Python datetime formats are supported.
 
 ## Change Log
 
+### v1.1.1
+
+- Added usage example of toDatetime() method in [README.md](./README.md)
+
 ### v1.1.0
 
 - Added `KSTString` class that extends `str`, allowing the result of `getKST()` to be used as both a formatted string and a `datetime` object
